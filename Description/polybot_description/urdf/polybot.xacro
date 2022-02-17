@@ -1,0 +1,167 @@
+<?xml version="1.0" ?>
+<robot name="polybot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+<xacro:include filename="$(find polybot_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find polybot_description)/urdf/polybot.trans" />
+<link name="base_link">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-0.006042588395459771 -7.966765037310012e-16 0.07288437083744741"/>
+    <mass value="5.735453926792375"/>
+    <inertia ixx="0.037854" ixy="-0.0" ixz="-0.005237" iyy="0.048939" iyz="-0.0" izz="0.050353"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="FrontWheel-Body_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="8.326672684688674e-17 -2.9886291025657957e-18 -0.026349194560915584"/>
+    <mass value="0.37326548623435213"/>
+    <inertia ixx="0.000303" ixy="0.0" ixz="0.0" iyy="0.000227" iyz="-0.0" izz="0.000143"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.11 -0.0 -0.068"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/FrontWheel-Body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.11 -0.0 -0.068"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/FrontWheel-Body_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel-Front_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="-1.3877787807814457e-17 -0.014999999999999998 1.0408340855860843e-17"/>
+    <mass value="0.9063102106524855"/>
+    <inertia ixx="0.000346" ixy="0.0" ixz="0.0" iyy="0.000555" iyz="-0.0" izz="0.000346"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.11 -0.015 -0.0055"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/Wheel-Front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.11 -0.015 -0.0055"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/Wheel-Front_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="LiDAR_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="0.0 -4.369780135393061e-18 0.007379903365776486"/>
+    <mass value="0.5105758461886611"/>
+    <inertia ixx="0.000186" ixy="-0.0" ixz="0.0" iyy="0.000186" iyz="-0.0" izz="0.000353"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="-0.0525 -0.0 -0.096"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/LiDAR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="-0.0525 -0.0 -0.096"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/LiDAR_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel2_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.7755575615628914e-17 0.009999999999999995 -6.938893903907228e-18"/>
+    <mass value="2.3482682519273395"/>
+    <inertia ixx="0.002873" ixy="-0.0" ixz="0.0" iyy="0.00559" iyz="0.0" izz="0.002873"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.051 -0.117 -0.036"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/Wheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.051 -0.117 -0.036"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/Wheel2_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<link name="Wheel1_1">
+  <inertial>
+    <origin rpy="0 0 0" xyz="2.7755575615628914e-17 -0.010000000000000023 -6.938893903907228e-18"/>
+    <mass value="2.3482682519273395"/>
+    <inertia ixx="0.002873" ixy="0.0" ixz="0.0" iyy="0.00559" iyz="0.0" izz="0.002873"/>
+  </inertial>
+  <visual>
+    <origin rpy="0 0 0" xyz="0.051 0.117 -0.036"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/Wheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+    <material name="steel_satin"/>
+  </visual>
+  <collision>
+    <origin rpy="0 0 0" xyz="0.051 0.117 -0.036"/>
+    <geometry>
+      <mesh filename="package://polybot_description/meshes/Wheel1_1.stl" scale="0.001 0.001 0.001"/>
+    </geometry>
+  </collision>
+</link>
+
+<joint name="FrontTurnJoint" type="continuous">
+  <origin rpy="0 0 0" xyz="0.11 0.0 0.068"/>
+  <parent link="base_link"/>
+  <child link="FrontWheel-Body_1"/>
+  <axis xyz="0.0 0.0 -1.0"/>
+</joint>
+
+<joint name="FrontWheel" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0 0.015 -0.0625"/>
+  <parent link="FrontWheel-Body_1"/>
+  <child link="Wheel-Front_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+<joint name="LiDAR" type="continuous">
+  <origin rpy="0 0 0" xyz="0.0525 0.0 0.096"/>
+  <parent link="base_link"/>
+  <child link="LiDAR_1"/>
+  <axis xyz="0.0 0.0 1.0"/>
+</joint>
+
+<joint name="Wheel2" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.051 0.117 0.036"/>
+  <parent link="base_link"/>
+  <child link="Wheel2_1"/>
+  <axis xyz="0.0 1.0 0.0"/>
+</joint>
+
+<joint name="Wheel1" type="continuous">
+  <origin rpy="0 0 0" xyz="-0.051 -0.117 0.036"/>
+  <parent link="base_link"/>
+  <child link="Wheel1_1"/>
+  <axis xyz="0.0 -1.0 0.0"/>
+</joint>
+
+</robot>
