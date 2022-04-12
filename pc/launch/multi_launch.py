@@ -30,6 +30,8 @@ from launch.actions import (DeclareLaunchArgument, ExecuteProcess, GroupAction,
 from launch.conditions import IfCondition
 from launch.launch_description_sources import PythonLaunchDescriptionSource
 from launch.substitutions import LaunchConfiguration, TextSubstitution
+from launch_ros.actions import PushRosNamespace
+
 
 def generate_robot_list(num_robots):
 
@@ -38,7 +40,7 @@ def generate_robot_list(num_robots):
     for i in range(num_robots):
         robot_name = "robot" + str(i)
         x_pos = float(i)
-        robot_list.append({'name': robot_name, 'x_pose': x_pos, 'y_pose': 0.0, 'z_pose': 0.01})
+        robot_list.append({'name': robot_name, 'x_pose': x_pos, 'y_pose': 0.5, 'z_pose': 0.01})
 
     return robot_list
 
@@ -49,7 +51,7 @@ def generate_launch_description():
     launch_dir = os.path.join(bringup_dir, 'launch')
 
     # Names and poses of the robots
-    robots = generate_robot_list(5)
+    robots = generate_robot_list(3)
 
     # On this example all robots are launched with the same settings
     autostart = LaunchConfiguration('autostart')
@@ -94,7 +96,7 @@ def generate_launch_description():
                                   'namespace': TextSubstitution(text=robot['name']),
                                   'use_namespace': 'True',
                                   'rviz_config': rviz_config_file}.items()),
-
+            
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(os.path.join(launch_dir, 'simulation_launch.py')),
                 launch_arguments={'namespace': robot['name'],

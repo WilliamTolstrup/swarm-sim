@@ -39,7 +39,7 @@ def generate_robot_list(num_robots):
     for i in range(num_robots):
         robot_name = "robot" + str(i)
         x_pos = float(i)
-        robot_list.append({'name': robot_name, 'x_pose': x_pos, 'y_pose': 0.0, 'z_pose': 0.01})
+        robot_list.append({'name': robot_name, 'x_pose': x_pos, 'y_pose': 0.5, 'z_pose': 0.01})
 
     return robot_list
 
@@ -50,7 +50,7 @@ def generate_launch_description():
 
     # Names and poses of the robots
 
-    robots = generate_robot_list(5)
+    robots = generate_robot_list(3)
 
     # Simulation settings
     world = LaunchConfiguration('world')
@@ -65,7 +65,7 @@ def generate_launch_description():
     # Declare the launch arguments
     declare_world_cmd = DeclareLaunchArgument(
         'world',
-        default_value=os.path.join(bringup_dir, 'worlds', 'world_only.model'),
+        default_value=os.path.join(bringup_dir, 'worlds', 'factory_world.world'),
         description='Full path to world file to load')
 
     declare_simulator_cmd = DeclareLaunchArgument(
@@ -75,7 +75,7 @@ def generate_launch_description():
 
     declare_map_yaml_cmd = DeclareLaunchArgument(
         'map',
-        default_value=os.path.join(bringup_dir, 'maps', 'turtlebot3_world.yaml'),
+        default_value=os.path.join(bringup_dir, 'maps', 'factory_world.yaml'),
         description='Full path to map file to load')
 
     declare_autostart_cmd = DeclareLaunchArgument(
