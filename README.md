@@ -25,8 +25,12 @@ Before launching these packages, *Navigation2*, *Nav2-bringup*, and, for the tim
     `sudo apt install ros-galactic-navigation2 ros-galactic-nav2-bringup ros-galactic-turtlebot3*`
 
 To correct world models are included in the folder *gazebo_models*. These needs to be in the hidden .gazebo/models folder. Copy/paste the following:
+
     `sudo cp -r swarm-sim/gazebo_models/workcell/ /home/$USER/.gazebo/models`
+
     `sudo cp -r swarm-sim/gazebo_models/aws_robomaker_warehouse_Bucket_01/ /home/$USER/.gazebo/models`
+
     `sudo cp -r swarm-sim/gazebo_models/aws_robomaker_warehouse_PalletJackB_01/ /home/$USER/.gazebo/models`
+    
     `sudo cp -r swarm-sim/gazebo_models/aws_robomaker_warehouse_ShelfE_01/ /home/$USER/.gazebo/models`
     
