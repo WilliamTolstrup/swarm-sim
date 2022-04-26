@@ -36,7 +36,7 @@ def generate_robot_list(num_robots):
 
     robot_list = []
 
-    for i in range(num_robots):
+    for i in range(1, num_robots + 1):
         robot_name = "robot" + str(i)
         x_pos = float(i)
         robot_list.append({'name': robot_name, 'x_pose': x_pos, 'y_pose': 0.5, 'z_pose': 0.01})
@@ -50,7 +50,7 @@ def generate_launch_description():
 
     # Names and poses of the robots
 
-    robots = generate_robot_list(3)
+    robots = generate_robot_list(5)
 
     # Simulation settings
     world = LaunchConfiguration('world')
@@ -79,7 +79,7 @@ def generate_launch_description():
         description='Full path to map file to load')
 
     declare_autostart_cmd = DeclareLaunchArgument(
-        'autostart', default_value='false',
+        'autostart', default_value='True', #Default false
         description='Automatically startup the stacks')
 
     declare_use_robot_state_pub_cmd = DeclareLaunchArgument(

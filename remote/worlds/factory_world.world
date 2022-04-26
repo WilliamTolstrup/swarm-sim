@@ -1772,165 +1772,106 @@
       <static>1</static>
       <pose>5.95719 7.46814 0 0 -0 0</pose>
     </model>
-    <model name='Construction Cone'>
-      <link name='link'>
-        <collision name='collision'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>model://construction_cone/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-          <max_contacts>10</max_contacts>
-          <surface>
-            <contact>
-              <ode/>
-            </contact>
-            <bounce/>
-            <friction>
-              <torsional>
-                <ode/>
-              </torsional>
-              <ode/>
-            </friction>
-          </surface>
-        </collision>
-        <visual name='visual'>
-          <geometry>
-            <mesh>
-              <scale>10 10 10</scale>
-              <uri>model://construction_cone/meshes/construction_cone.dae</uri>
-            </mesh>
-          </geometry>
-        </visual>
-        <self_collide>0</self_collide>
-        <inertial>
-          <pose>0 0 0 0 -0 0</pose>
-          <inertia>
-            <ixx>1</ixx>
-            <ixy>0</ixy>
-            <ixz>0</ixz>
-            <iyy>1</iyy>
-            <iyz>0</iyz>
-            <izz>1</izz>
-          </inertia>
-          <mass>1</mass>
-        </inertial>
-        <enable_wind>0</enable_wind>
-        <kinematic>0</kinematic>
-      </link>
-      <pose>1.26265 1.16486 0 0 -0 0</pose>
-    </model>
     <state world_name='default'>
-      <sim_time>1443 867000000</sim_time>
-      <real_time>1456 112660961</real_time>
-      <wall_time>1648842950 675212662</wall_time>
-      <iterations>1443867</iterations>
-      <model name='Construction Cone'>
-        <pose>1.26265 1.16486 -2e-06 1e-06 -1e-06 0</pose>
-        <scale>1 1 1</scale>
-        <link name='link'>
-          <pose>1.26265 1.16486 -2e-06 1e-06 -1e-06 0</pose>
-          <velocity>0 0 0 0 -0 0</velocity>
-          <acceleration>0 0 -9.8 0 -0 0</acceleration>
-          <wrench>0 0 -9.8 0 -0 0</wrench>
-        </link>
-      </model>
+      <sim_time>4717 115000000</sim_time>
+      <real_time>1177 876973460</real_time>
+      <wall_time>1650359418 428560169</wall_time>
+      <iterations>1175336</iterations>
       <model name='aws_robomaker_warehouse_Bucket_01'>
-        <pose>1.99721 3.60155 0 0 -0 0</pose>
+        <pose>6.4 10.8 0 0 -0 1.57</pose>
         <scale>1 1 1</scale>
         <link name='body'>
-          <pose>1.99721 3.60155 0 0 -0 0</pose>
+          <pose>6.4 10.8 0 0 -0 1.57</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='aws_robomaker_warehouse_PalletJackB_01'>
-        <pose>8.26419 -9.08522 0 0 -0 0</pose>
+        <pose>19 17 0 0 -0 1.57</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>8.26419 -9.08522 0 0 -0 0</pose>
+          <pose>19 17 0 0 -0 1.57</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='aws_robomaker_warehouse_ShelfE_01'>
-        <pose>5.95719 7.46814 0 0 -0 0</pose>
+        <pose>2.5 16 0 0 -0 1.57</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>5.95719 7.46814 0 0 -0 0</pose>
+          <pose>2.5 16 0 0 -0 1.57</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='grey_wall'>
-        <pose>6.25599 10.2 -1.76 0 -0 0</pose>
+        <pose>3.8 19 -1.76 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>6.25599 10.2 -0.36 0 -0 0</pose>
+          <pose>3.8 19 -0.36 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='grey_wall_0'>
-        <pose>-1.23087 10.2 -1.76 0 -0 0</pose>
+        <pose>10 19 -1.76 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-1.23087 10.2 -0.36 0 -0 0</pose>
+          <pose>10 19 -0.36 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='grey_wall_1'>
-        <pose>-5.37 10.2 -1.76 0 -0 0</pose>
+        <pose>16 19 -1.76 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-5.37 10.2 -0.36 0 -0 0</pose>
+          <pose>16 19 -0.36 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='grey_wall_2'>
-        <pose>10 6.55 -1.76 0 -0 1.57</pose>
+        <pose>0 15.35 -1.76 0 -0 1.57</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>10 6.55 -0.36 0 -0 1.57</pose>
+          <pose>0 15.35 -0.36 0 -0 1.57</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='grey_wall_2_clone'>
-        <pose>10 0.371354 -1.76 0 -0 1.57</pose>
+        <pose>0 11.1 -1.76 0 -0 1.57</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>10 0.371354 -0.36 0 -0 1.57</pose>
+          <pose>0 11.1 -0.36 0 -0 1.57</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='grey_wall_2_clone_clone'>
-        <pose>10 -5.9 -1.76 0 -0 1.57</pose>
+        <pose>0 3.6 -1.76 0 -0 1.57</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>10 -5.9 -0.36 0 -0 1.57</pose>
+          <pose>0 3.6 -0.36 0 -0 1.57</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
         </link>
       </model>
       <model name='grey_wall_2_clone_clone_0'>
-        <pose>-9.024 6.5 -1.76 0 -0 1.57</pose>
+        <pose>3.65 -0.1 -1.76 0 -0 0</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>-9.024 6.5 -0.36 0 -0 1.57</pose>
+          <pose>3.65 -0.1 -0.36 0 -0 0</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1947,10 +1888,10 @@
         </link>
       </model>
       <model name='workcell'>
-        <pose>0 0 0 0 -0 0</pose>
+        <pose>10 8.925 0 0 -0 1.57</pose>
         <scale>1 1 1</scale>
         <link name='link'>
-          <pose>0 0 0 0 -0 0</pose>
+          <pose>10 8.925 0 0 -0 1.57</pose>
           <velocity>0 0 0 0 -0 0</velocity>
           <acceleration>0 0 0 0 -0 0</acceleration>
           <wrench>0 0 0 0 -0 0</wrench>
@@ -1962,7 +1903,7 @@
     </state>
     <gui fullscreen='0'>
       <camera name='user_camera'>
-        <pose>24.8708 11.7551 19.5121 0 0.649796 -2.85259</pose>
+        <pose>-7.96651 24.4301 42.6831 -0 1.18179 -0.793357</pose>
         <view_controller>orbit</view_controller>
         <projection_type>perspective</projection_type>
       </camera>
