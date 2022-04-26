@@ -46,10 +46,12 @@ def generate_robot_list(num_robots):
 def generate_custom_list(start, end):
     robot_list = []
 
-    for i in range(start, end):
+    for i in range(start, end + 1):
         robot_name = "robot" + str(i)
         x_pos = float(i)
         robot_list.append({'name': robot_name, 'x_pose': x_pos, 'y_pose': 0.5, 'z_pose': 0.01})
+    
+    return robot_list
 
 def generate_launch_description():
     # Get the launch directory
@@ -58,7 +60,7 @@ def generate_launch_description():
 
     # Names and poses of the robots
 
-    robots = generate_custom_list(1,2)
+    robots = generate_custom_list(3,4)
 
     # Simulation settings
     world = LaunchConfiguration('world')
