@@ -44,6 +44,7 @@ def generate_robot_list(num_robots):
     return robot_list
 
 def generate_custom_list(start, end):
+    
     robot_list = []
 
     for i in range(start, end + 1):
@@ -104,12 +105,6 @@ def generate_launch_description():
                 f"{robot['name']}_params_file",
                 default_value=os.path.join(bringup_dir, 'params', f"nav2_multirobot_params_{robot['name']}.yaml"),
                 description=f"Full path to the ROS2 parameters file to use for robot{robot['name']} launched nodes"))
-
-    # Start Gazebo with plugin providing the robot spawing service
-    start_gazebo_cmd = ExecuteProcess(
-        cmd=[simulator, '--verbose', '-s', 'libgazebo_ros_init.so',
-                                     '-s', 'libgazebo_ros_factory.so', world],
-        output='screen')
 
     # Define commands for spawing the robots into Gazebo
     spawn_robots_cmds = []
@@ -175,9 +170,6 @@ def generate_launch_description():
     # Declare launch options for robot parameters
     for declare_param_list in declare_params_list:
         ld.add_action(declare_param_list)
-
-    # Add the actions to start gazebo, robots and simulations
-    ld.add_action(start_gazebo_cmd)
 
     for spawn_robot_cmd in spawn_robots_cmds:
         ld.add_action(spawn_robot_cmd)
