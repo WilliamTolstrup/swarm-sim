@@ -60,7 +60,7 @@ def generate_launch_description():
 
     # Names and poses of the robots
 
-    robots = generate_robot_list(3)
+    robots = generate_custom_list(1,1)
 
     # Simulation settings
     world = LaunchConfiguration('world')

@@ -59,7 +59,7 @@ def generate_launch_description():
 
     # Names and poses of the robots
 
-    robots = generate_robot_list(3)
+    robots = generate_robot_list(7)
 
     # Simulation settings
     world = LaunchConfiguration('world')
@@ -74,7 +74,7 @@ def generate_launch_description():
     # Declare the launch arguments
     declare_world_cmd = DeclareLaunchArgument(
         'world',
-        default_value=os.path.join(bringup_dir, 'worlds', 'factory_world.world'),
+        default_value=os.path.join(bringup_dir, 'worlds', 'factory_world.world'),         # # # # Change world file here... # # # #
         description='Full path to world file to load')
 
     declare_simulator_cmd = DeclareLaunchArgument(
