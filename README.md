@@ -33,7 +33,6 @@ The correct world models are included in the folder *gazebo_models*. These needs
 
     sudo cp -r swarm-sim/gazebo_models/aws_robomaker_warehouse_ShelfE_01/ /home/$USER/.gazebo/models
     
-    
-    ## Demo video
-    https://youtu.be/-GDGRuI-OEM
+## Demo video
+https://youtu.be/-GDGRuI-OEM
     
